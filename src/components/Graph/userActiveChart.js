@@ -33,7 +33,7 @@ const UserActiveChart = ({ chartTitle, selectedOptions, type, chartID }) => {
 
     // Cleanup function to handle unmounting
     return () => {
-      Plotly.purge(chartID);
+      // Plotly.purge(chartID);
     };
   }, [selectedOptions]);
 
