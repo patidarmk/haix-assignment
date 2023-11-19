@@ -20,13 +20,18 @@ const MultiSelect = ({
         {initialOptions?.map((option) => (
           <div
             key={option}
+            className={`rounded px-2 text-[12px] ${
+              selectedOptions.includes(option)
+                ? "border-1 border-[blue] "
+                : "border-1"
+            } `}
             style={{
               display: "inline-block",
               marginRight: 8,
               padding: "8px",
               backgroundColor: selectedOptions.includes(option)
                 ? "lightblue"
-                : "transparent",
+                : "white",
               cursor: "pointer",
             }}
             onClick={() => handleOptionClick(option)}

@@ -13,7 +13,7 @@ function App() {
 
   console.log(selectedChart, "chart");
   return (
-    <div className="App">
+    <div className="App ">
       <MultiSelect
         initialOptions={companiesList}
         selectedOptions={selectedOptions}
@@ -25,7 +25,7 @@ function App() {
         selectedOptions={selectedChart}
         setSelectedOptions={setSelectedChart}
       />
-      <div className="grid grid-cols-3  ">
+      <div className="grid grid-cols-3 gap-4  ">
         {chartListData.map((item) => {
           return (
             selectedChart.includes(item.title) && (
