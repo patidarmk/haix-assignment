@@ -2,14 +2,16 @@ import React, { useEffect } from "react";
 import Plotly from "plotly.js-basic-dist";
 import { companiesData } from "../../utils/data";
 
-const UserActiveChart = ({ selectedOptions, type, chartID }) => {
+const UserActiveChart = ({ chartTitle, selectedOptions, type, chartID }) => {
+  // console.log(chartID, "chartID");
   useEffect(() => {
     const traceData = companiesData
       ?.map((item) => {
         if (selectedOptions?.includes(item.title)) {
+          console.log(item.chartID, "chartid");
           return {
             x: ["Q1", "Q2", "Q3", "Q4", "Q5"],
-            y: item.userActivateData,
+            y: item[chartID],
             type: type,
             name: item.title,
           };
@@ -21,11 +23,12 @@ const UserActiveChart = ({ selectedOptions, type, chartID }) => {
 
     // Layout configuration
     var layout = {
-      title: "User Active Timeline",
+      title: chartTitle,
       xaxis: { title: "Active Hours" },
       yaxis: { title: "Revenue" },
     };
 
+    console.log(traceData, "trace");
     Plotly.newPlot(chartID, traceData, layout);
 
     // Cleanup function to handle unmounting

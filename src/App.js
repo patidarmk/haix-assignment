@@ -30,6 +30,7 @@ function App() {
           return (
             selectedChart.includes(item.title) && (
               <UserActiveChart
+                chartTitle={item.title}
                 selectedOptions={selectedOptions}
                 chartID={item.chartId}
                 type={item.type}
