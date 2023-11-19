@@ -3,7 +3,7 @@ import "./App.css";
 import MultiSelect from "./components/multiselect";
 import { useState } from "react";
 import UserActiveChart from "./components/Graph/userActiveChart";
-import { chartList, chartListData, companiesData } from "./utils/data";
+import { chartListData, companiesData } from "./utils/data";
 
 function App() {
   const [selectedOptions, setSelectedOptions] = useState([]);

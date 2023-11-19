@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
-const MultiSelect = ({initialOptions,selectedOptions,setSelectedOptions}) => {
-   
-
+import React from "react";
+const MultiSelect = ({
+  initialOptions,
+  selectedOptions,
+  setSelectedOptions,
+}) => {
   const handleOptionClick = (option) => {
     setSelectedOptions((prevOptions) => {
       if (prevOptions.includes(option)) {
@@ -14,23 +16,25 @@ const MultiSelect = ({initialOptions,selectedOptions,setSelectedOptions}) => {
 
   return (
     <div>
-          <div>
-          {initialOptions?.map((option) => (
-            <div
-              key={option}
-              style={{
-                display: 'inline-block',
-                marginRight: 8,
-                padding: '8px',
-                backgroundColor: selectedOptions.includes(option) ? 'lightblue' : 'transparent',
-                cursor: 'pointer'
-              }}
-              onClick={() => handleOptionClick(option)}
-            >
-              {option}
-            </div>
-          ))}
-        </div>
+      <div>
+        {initialOptions?.map((option) => (
+          <div
+            key={option}
+            style={{
+              display: "inline-block",
+              marginRight: 8,
+              padding: "8px",
+              backgroundColor: selectedOptions.includes(option)
+                ? "lightblue"
+                : "transparent",
+              cursor: "pointer",
+            }}
+            onClick={() => handleOptionClick(option)}
+          >
+            {option}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
