@@ -34,14 +34,14 @@ function App() {
   console.log(selectedChart, "chart");
   return (
     <div className="App h-[100vh]">
-      <div className="h-[33vh] ml-4 ">
+      <div className="h-[37vh] ml-2 ">
         <MultiSelect
           initialOptions={companiesList}
           selectedOptions={selectedOptions}
           setSelectedOptions={setSelectedOptions}
         />
-        <form className=" gap-8 flex mt-4 text-[16px]">
-          <div className="mb-4">
+        <form className=" gap-8 flex mt-2 text-[16px]">
+          <div className="mb-2">
             <label className=" text-gray-600 text-[16px]">Radio Button</label>
             <div className="flex flex-col mt-2 ">
               <label className="inline-flex ">
@@ -66,13 +66,13 @@ function App() {
               </label>
             </div>
           </div>
-          <div className="mb-4 flex flex-col items-start">
+          <div className="mb-2 flex flex-col items-start">
             <label className=" text-gray-600 text-[16px] ">
               Number Of Days
             </label>
             <input
               type="text"
-              className="form-input mt-3 py-1 w-[150px] border-[gray] rounded outline-none focus:outline-[#87CEFA] "
+              className="form-input mt-2 py-1 w-[150px] border-[gray] rounded outline-none focus:outline-[#87CEFA] "
               placeholder="10"
               value={numberInput}
               onChange={handleNumberInputChange}
@@ -115,7 +115,7 @@ function App() {
 
           <p className="text-left my-2 ">Fetch Insights</p>
         </div>
-        <p className="text-left mt-6 text-[16px]">
+        <p className="text-left mt-6 mb-2 text-[16px]">
           Show Analysis for{" "}
           <span className="text-[16px] text-[#557C55]">
             {selectedOptions.join(" , ")}
