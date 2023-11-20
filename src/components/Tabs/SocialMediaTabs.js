@@ -9,7 +9,7 @@ const SocialMediaTabs = () => {
   };
 
   return (
-    <div className="flex w-full gap-4 justify-end bg-[black]">
+    <div className="flex w-full gap-4 h-[60px] justify-end bg-[black]">
       <div
         className={`cursor-pointer p-4 text-white ${
           activeTab === "facebook"
