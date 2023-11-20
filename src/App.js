@@ -27,7 +27,7 @@ function App() {
         selectedOptions={selectedChart}
         setSelectedOptions={setSelectedChart}
       />
-      <div className="grid grid-cols-1 xl:mx-4 pt-8 h-[60vh] overflow-y-scroll sm:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-16  ">
+      <div className="grid grid-cols-1  xl:mx-4 pt-8 h-[60vh] overflow-y-scroll sm:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-16  ">
         {chartListData.map((item) => {
           return (
             selectedChart.includes(item.title) && (
