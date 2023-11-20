@@ -40,46 +40,46 @@ function App() {
           selectedOptions={selectedOptions}
           setSelectedOptions={setSelectedOptions}
         />
-        <form className=" gap-8 flex mt-8">
+        <form className=" gap-8 flex mt-4 text-[16px]">
           <div className="mb-4">
-            <label className=" text-gray-700 text-[18px]">Radio Button</label>
-            <div className="flex flex-col ">
+            <label className=" text-gray-600 text-[16px]">Radio Button</label>
+            <div className="flex flex-col mt-2 ">
               <label className="inline-flex ">
                 <input
                   type="radio"
-                  className="form-radio text-indigo-600"
+                  className="form-radio mr-1 text-indigo-600"
                   value="option1"
                   checked={radioValue === "option1"}
                   onChange={handleRadioChange}
                 />
-                <span className="">Days</span>
+                <span className="text-[14px]">Days</span>
               </label>
               <label className="inline-flex  ">
                 <input
                   type="radio"
-                  className="form-radio text-indigo-600"
+                  className="form-radio mr-1 text-indigo-600"
                   value="option2"
                   checked={radioValue === "option2"}
                   onChange={handleRadioChange}
                 />
-                <span className="">Custom Range</span>
+                <span className="text-[14px]">Custom Range</span>
               </label>
             </div>
           </div>
           <div className="mb-4 flex flex-col items-start">
-            <label className=" text-gray-700 text-[18px] ">
+            <label className=" text-gray-600 text-[16px] ">
               Number Of Days
             </label>
             <input
               type="text"
-              className="form-input mt-1 p-2 border-1 border-[gray] rounded !focus:border-[blue] active:border-[blue] "
-              placeholder="Enter a number"
+              className="form-input mt-3 py-1 w-[150px] border-[gray] rounded outline-none focus:outline-[#87CEFA] "
+              placeholder="10"
               value={numberInput}
               onChange={handleNumberInputChange}
             />
           </div>
         </form>
-        <div className="flex ">
+        <div className="flex my-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -97,7 +97,7 @@ function App() {
           <p>Boolean Search</p>
         </div>
 
-        <div className="bg-[#87CEFA] my-2 flex items-center rounded px-2 py-[2px] w-[150px]">
+        <div className="bg-[#87CEFA] my-4 flex items-center rounded px-2 py-[2px] w-[150px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -115,9 +115,9 @@ function App() {
 
           <p className="text-left my-2 ">Fetch Insights</p>
         </div>
-        <p className="text-left">
+        <p className="text-left mt-6 text-[16px]">
           Show Analysis for{" "}
-          <span className="text-[14px] text-[#2D9596]">
+          <span className="text-[16px] text-[#557C55]">
             {selectedOptions.join(" , ")}
           </span>
           {""}
