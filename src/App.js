@@ -4,6 +4,7 @@ import MultiSelect from "./components/MutliSelect/multiselect";
 import { useState } from "react";
 import UserActiveChart from "./components/Graph/CustomChart";
 import { chartListData, companiesData } from "./utils/data";
+import SocialMediaTabs from "./components/Tabs/SocialMediaTabs";
 
 function App() {
   const [selectedOptions, setSelectedOptions] = useState([]);
@@ -123,6 +124,7 @@ function App() {
           {""}
         </p>
       </div>
+      <SocialMediaTabs />
       <div className="ml-4">
         <MultiSelect
           initialOptions={chartList}
