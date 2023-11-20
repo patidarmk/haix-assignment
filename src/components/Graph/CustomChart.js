@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Plotly from "plotly.js-basic-dist";
 import { companiesData } from "../../utils/data";
 
-const UserActiveChart = ({ chartTitle, selectedOptions, type, chartID }) => {
+const CustomChart = ({ chartTitle, selectedOptions, type, chartID }) => {
   // console.log(chartID, "chartID");
   useEffect(() => {
     const traceData = companiesData
@@ -37,7 +37,12 @@ const UserActiveChart = ({ chartTitle, selectedOptions, type, chartID }) => {
     };
   }, [selectedOptions]);
 
-  return <div id={chartID} />;
+  return (
+    <div
+      id={chartID}
+      className="sm:h-[300px] sm:w-[300px]  md:h-[300px] md:w-[300px] lg:h-[300px] lg:w-[300px] xl:h-[400px] xl:w-[400px] 2xl:h-[500px] 2xl:w-[500px] "
+    />
+  );
 };
 
-export default UserActiveChart;
+export default CustomChart;
