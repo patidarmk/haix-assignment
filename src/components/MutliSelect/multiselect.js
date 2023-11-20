@@ -15,7 +15,7 @@ const MultiSelect = ({
   };
 
   return (
-    <div className=" py-2 px-4 flex flex-wrap gap-2">
+    <div className=" py-2 flex flex-wrap gap-2">
       {initialOptions?.map((option) => (
         <div
           key={option}
